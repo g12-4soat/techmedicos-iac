@@ -1,6 +1,6 @@
 <p dir="auto"><img src="https://github.com/g12-4soat/techmedicos-iac/blob/main/docs/Imagem/logo-techmedicos.png" alt="TECHMEDICOS" title="TECHMEDICOS" align="right" height="60" style="max-width: 100%;"></p>
 
-# Tech Medicos
+# Tech Medicos IaC
 Projeto Hackaton
 
 Este repositório contém o código Terraform necessário para provisionar a infraestrutura na AWS e automatizar o deploy contínuo (CD) da nossa aplicação do Hackaton da FIAP - Turma 4SOAT.
