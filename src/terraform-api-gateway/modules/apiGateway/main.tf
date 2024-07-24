@@ -152,7 +152,7 @@ resource "aws_api_gateway_integration" "techmedicos_proxy" {
   http_method             = "ANY"
   integration_http_method = "ANY"
   type                    = "HTTP_PROXY"
-  uri                     = "http://${data.aws_lb.eks_lb_api_techmedicos.dns_name}:5050/{proxy}"
+  uri                     = "http://${data.aws_lb.eks_lb_api_techmedicos.dns_name}:5055/{proxy}"
   passthrough_behavior    = "WHEN_NO_MATCH"
   content_handling        = "CONVERT_TO_TEXT"
   request_parameters = {
