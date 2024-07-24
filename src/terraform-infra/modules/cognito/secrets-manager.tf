@@ -9,6 +9,7 @@ resource "aws_secretsmanager_secret_version" "lambda_auth_credentials" {
     Region : var.region,
     UserPoolId : aws_cognito_user_pool.tech_medicos_clientes_pool.id,
     UserPoolClientId : aws_cognito_user_pool_client.tech_medicos_clientes_pool_client.id
-    PasswordDefault : var.password-default
+    PasswordMedicoDefault : random_password.master_password[0].result,
+    PasswordPacienteDefault : random_password.master_password[1].result
   })
 }
