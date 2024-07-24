@@ -33,7 +33,7 @@ resource "aws_cognito_user_pool_client" "tech_medicos_clientes_pool_client" {
 resource "aws_cognito_user" "medicos_seed" {
   user_pool_id = aws_cognito_user_pool.tech_medicos_clientes_pool.id
   username     = var.user-medico
-  password = var.password-default
+  password = random_password.master_password[0].result
   attributes   = {
     email = var.email-medico,
     email_verified = true
@@ -44,7 +44,7 @@ resource "aws_cognito_user" "medicos_seed" {
 resource "aws_cognito_user" "pacientes_seed" {
   user_pool_id = aws_cognito_user_pool.tech_medicos_clientes_pool.id
   username     = var.user-paciente
-  password = var.password-default
+  password = random_password.master_password[1].result
   attributes   = {
     email = var.email-paciente,
     email_verified = true
